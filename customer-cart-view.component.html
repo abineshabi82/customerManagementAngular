@@ -1,0 +1,18 @@
+<div class="row " >
+    <div class="col-sm-3 card" style="width: 10rem;margin-top:10px;margin-left: 70px;" *ngFor="let customer of customers">
+        <div class="card-header-fliud bg-dark-fliud text-white-fliud">
+        <h3>
+            <a class="fa fa-edit fa-1x" (click)="newMapData(customer)" routerLink="/customerInfo"></a>
+            <span style="margin-left: 76px;">{{customer.name}}</span>
+
+        </h3>
+        
+        </div>
+        <div class="card-body">
+        <img src="https://www.hit4hit.org/img/login/user-icon-6.png" class="card-img-top" alt="image">
+        <h5>{{customer.id}}</h5><h6>{{customer.key}}</h6>
+        <button (click)="newMapData(customer)" style="margin-bottom:10px;width: 100%;" routerLink="/customerView/mapView" class="btn btn-primary">View Map</button>
+       
+    </div>
+    </div>
+</div>
